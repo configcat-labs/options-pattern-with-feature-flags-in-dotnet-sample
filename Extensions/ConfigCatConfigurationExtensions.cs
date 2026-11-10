@@ -32,7 +32,7 @@ public static class ConfigCatConfigurationExtensions
     }
 
     /// <summary>
-    /// Adds an <see cref="IConfigurationProvider"/> that loads configuration values from a ConfigCat config, inserted at the specified <see paramref="index"/>.
+    /// Adds an <see cref="IConfigurationProvider"/> that loads configuration values from a ConfigCat config, inserted at the specified <paramref name="index"/>.
     /// </summary>
     /// <param name="builder">The <see cref="IConfigurationBuilder"/> to add to.</param>
     /// <param name="index">The zero-based index at which the provider should be inserted.</param>
