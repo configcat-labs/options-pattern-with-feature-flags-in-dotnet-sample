@@ -23,8 +23,8 @@ When a GET request is sent to the root endpoint, the app logs the values of `MyF
 1. Clone this sample project.
 
     ```bash
-    git clone https://github.com/configcat-labs/feature-flags-in-dotnet-sample.git
-    cd feature-flags-in-dotnet-sample
+    git clone https://github.com/configcat-labs/options-pattern-with-feature-flags-in-dotnet-sample.git
+    cd options-pattern-with-feature-flags-in-dotnet-sample
     ```
 
 2. In your [ConfigCat Dashboard](https://app.configcat.com), create the following feature flag and setting:
