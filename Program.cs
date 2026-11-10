@@ -7,14 +7,14 @@ var builder = WebApplication.CreateBuilder();
 var loggingReadyNotifier = new LoggingReadyNotifier();
 
 // Add ConfigCat as a configuration source (so it takes priority over all default configuration sources;
-// to adjust priority, inspect builder.Configuration.Sources and use InsertConfigCat to insert the source
+// to adjust priority, inspect builder.Configuration.Sources and use AddConfigCat(index, ...) to insert the source
 // at the right position; see also https://learn.microsoft.com/en-us/dotnet/core/extensions/generic-host#host-builder-settings)
 builder.Configuration.AddConfigCat(source =>
 {
     // Populate options from the currently available configuration (e.g., from appsettings.json)
     builder.Configuration.GetSection("ConfigCat:ConfigurationSource").Bind(source);
 
-    // Enable case-insensitive matching for ConfigCat SDK Keys, which are case-sensitive by default
+    // Enable case-insensitive matching for ConfigCat setting keys, which are case-sensitive by default
     source.CaseInsensitiveKeys = true;
 
     // Enable automatic reload of settings when the underlying polling loop detects changes to config data

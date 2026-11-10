@@ -24,7 +24,6 @@ public static class ConfigCatConfigurationExtensions
     /// </summary>
     /// <param name="builder">The <see cref="IConfigurationBuilder"/> to add to.</param>
     /// <param name="configureSource">Configures the source.</param>
-    /// <param name="notifyLoggingReady">A delegate that should be called as soon as the DI container is built and the logging infrastructure becomes available.</param>
     /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
     public static IConfigurationBuilder AddConfigCat(this IConfigurationBuilder builder, Action<ConfigCatConfigurationSource> configureSource)
     {
@@ -33,12 +32,11 @@ public static class ConfigCatConfigurationExtensions
     }
 
     /// <summary>
-    /// Adds an <see cref="IConfigurationProvider"/> that loads configuration values from a ConfigCat config, inserted at the specified <see cref="index"/>.
+    /// Adds an <see cref="IConfigurationProvider"/> that loads configuration values from a ConfigCat config, inserted at the specified <see paramref="index"/>.
     /// </summary>
     /// <param name="builder">The <see cref="IConfigurationBuilder"/> to add to.</param>
     /// <param name="index">The zero-based index at which the provider should be inserted.</param>
     /// <param name="configureSource">Configures the source.</param>
-    /// <param name="notifyLoggingReady">A delegate that should be called as soon as the DI container is built and the logging infrastructure becomes available.</param>
     /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
     public static IConfigurationBuilder AddConfigCat(this IConfigurationBuilder builder, int index, Action<ConfigCatConfigurationSource> configureSource)
     {
