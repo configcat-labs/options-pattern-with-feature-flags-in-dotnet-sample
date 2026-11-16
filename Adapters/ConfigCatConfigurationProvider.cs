@@ -70,7 +70,7 @@ public sealed class ConfigCatConfigurationProvider : ConfigurationProvider, IDis
 
         var snapshot = _client.Snapshot();
         Load(snapshot);
-        _initialSnapshot = snapshot;
+        Volatile.Write(ref _initialSnapshot, snapshot);
 
         if (cacheState == ClientCacheState.NoFlagData)
         {
