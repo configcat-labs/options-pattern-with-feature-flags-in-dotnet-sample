@@ -1,6 +1,6 @@
-# Using ConfigCat via the Options Pattern in .NET
+# How to Use ConfigCat via the Options Pattern in .NET sample
 
-**[Read the blog post here](https://configcat.com/blog/2021/10/10/aspnetcore-options-pattern/)**
+**[Read the blog post here](https://configcat.com/blog/using-configcat-via-the-options-pattern-in-dotnet)**
 
 This ASP.NET Core (.NET 10) sample app demonstrates how to use ConfigCat feature flags and settings to configure your application through the [Options pattern](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options), the same way you would with configuration values specified in `appsettings.json` or environment variables.
 
